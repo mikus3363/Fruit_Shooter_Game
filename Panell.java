@@ -37,20 +37,20 @@ public class Panell extends JPanel implements MouseListener {
     private int roadX6 = 2,roadY6 = 2;
     private int roadX7 = 2,roadY7 = 2;
     private int roadX8 = 1,roadY8 = 1;
-    private Charakterss apple_red1 = new Charakterss("Fruit_Shooter_Game\\jablko_czerwone.png",150,150);
-    private Charakterss apple_red2 = new Charakterss("Fruit_Shooter_Game\\jablko_czerwone.png",150,150);
-    private Charakterss apple_red3 = new Charakterss("Fruit_Shooter_Game\\jablko_czerwone.png",150,150);
-    private Charakterss apple_red4 = new Charakterss("Fruit_Shooter_Game\\jablko_czerwone.png",150,150);
-    private Charakterss apple_red5 = new Charakterss("Fruit_Shooter_Game\\jablko_czerwone.png",150,150);
-    private Charakterss apple_green1 = new Charakterss("Fruit_Shooter_Game\\jablko_zielone.png",150,150);
-    private Charakterss apple_green2 = new Charakterss("Fruit_Shooter_Game\\jablko_zielone.png",150,150);
-    private Charakterss granat = new Charakterss("Fruit_Shooter_Game\\granat.png",150,150);
+    private Charakterss apple_red1 = new Charakterss("jablko_czerwone.png",150,150);
+    private Charakterss apple_red2 = new Charakterss("jablko_czerwone.png",150,150);
+    private Charakterss apple_red3 = new Charakterss("jablko_czerwone.png",150,150);
+    private Charakterss apple_red4 = new Charakterss("jablko_czerwone.png",150,150);
+    private Charakterss apple_red5 = new Charakterss("jablko_czerwone.png",150,150);
+    private Charakterss apple_green1 = new Charakterss("jablko_zielone.png",150,150);
+    private Charakterss apple_green2 = new Charakterss("jablko_zielone.png",150,150);
+    private Charakterss granat = new Charakterss("granat.png",150,150);
     private Charakterss tab[] = new Charakterss[8];
     private boolean hpFlaga = false;
     public Panell(){
         this.setLayout(null);
         this.setCursor(Toolkit.getDefaultToolkit().createCustomCursor(
-                new ImageIcon("Fruit_Shooter_Game/worek.png").getImage(),
+                new ImageIcon("worek.png").getImage(),
                 new Point(15,15),"custom cursor"));
         action();
         addMouseListener(this);
@@ -69,13 +69,13 @@ public class Panell extends JPanel implements MouseListener {
         boundX = this.getWidth();
         boundY = this.getHeight();
         zdjecieMapa = Toolkit.getDefaultToolkit();
-        imgMapa = zdjecieMapa.getImage("Fruit_Shooter_Game/sad_jablek.jpg");
+        imgMapa = zdjecieMapa.getImage("sad_jablek.jpg");
         g2d.drawImage(imgMapa,0,0,this.getWidth(),this.getHeight(),null);
         repaint();
     }
     private void paintLufa(Graphics2D g2d){
         zdjecieLufa = Toolkit.getDefaultToolkit();
-        imgTaczka = zdjecieLufa.getImage("Fruit_Shooter_Game/taczka.png");
+        imgTaczka = zdjecieLufa.getImage("taczka.png");
         g2d.drawImage(imgTaczka,this.getWidth()/2-100,this.getHeight()-100,200,100,null);
         repaint();
     }
